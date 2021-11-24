@@ -1,0 +1,141 @@
+/* colors for the whole project */
+:root {
+    --color-primary-blue-100: hsl(225, 100%, 94%);
+    --color-primary-blue-200: hsl(245, 75%, 52%);
+    --color-neutral-blue-100: hsl(228, 100%, 98%);
+    --color-neutral-blue-200: rgb(114, 128, 167);
+    --color-neutral-blue-300: rgb(31, 47, 86);
+}
+/* what does box-sizing used for? */
+html {
+    box-sizing: border-box;
+}
+
+/* what are the functions of ::before and ::after here?  */
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* horizontally center */
+    justify-content: center; 
+    /* vertically center */
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    /* notice: set background logic! */
+    background: url("./images/pattern-background-desktop.svg") no-repeat;
+    background-color: var(--color-primary-blue-100);
+    min-height: 100vh;
+}
+
+.card {
+    /* still need to learn about grid and grid setting */
+    display: grid;
+    grid-template-columns: 20.5rem;
+    grid-template-rows: 10rem repeat(3,min-content);
+    min-width: 0.4375rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    /* still need to learn about box-shadow thing */
+    box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 15.18%);
+}
+
+.card-head-box {
+    margin: 2rem 0 0;
+    padding: 0 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card-title {
+    font-weight: 900;
+    color: var(--color-neutral-blue-300);
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-weight: 500;
+    color: var(--color-neutral-blue-200);
+    font-size: 0.9rem;
+    /* when to use line-height? what's the unit for 1.6? */
+    line-height: 1.6; 
+}
+
+.plan-container {
+    display: flex;
+    align-items: center;
+    border-radius: 0.65rem;
+    background-color: var(--color-neutral-blue-100);
+    margin: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.music-icon {
+    margin: 1rem;
+}
+
+.annual-plan {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-right: 2.8rem;
+}
+
+.plan-title {
+    font-weight: 700;
+    color: var(--color-neutral-blue-300);
+}
+
+.price {
+    color: var(--color-neutral-blue-200);
+    font-weight: 500;
+}
+
+.change-button {
+    text-decoration: underline;
+    background:transparent;
+    color: var(--color-primary-blue-200);
+    border: none;
+    font-weight: 700;
+    font-size: 0.785rem;
+}
+
+.payment-container {
+    margin: 0.5rem;
+}
+
+.payment-button {
+    background-color: var(--color-primary-blue-200);
+    color: #fff;
+    border-radius: 0.65rem;
+    padding: 0.5rem;
+    margin-top: 2.2rem;
+    font-size: 0.785rem;
+    font-weight: 700;
+    /* about box shadow ?? */
+    box-shadow: 0 20px 20px 0 rgba(56, 42, 225, 15%);
+}
+
+.payment-button:hover {
+    background-color: var(--color-neutral-blue-200);
+}
+
+.cancel-button {
+    background: transparent;
+    color: var(--color-neutral-blue-200);
+    margin: 0.6rem;
+    font-size: 0.785rem;
+    font-weight: 700;
+}
+
+.cancel-button:hover {
+    color: var(--color-neutral-blue-300);
+}
+
+.attribution { font-size: 11px; text-align: center; margin: 1rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
